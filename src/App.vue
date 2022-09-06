@@ -3,20 +3,24 @@
   <topHeader></topHeader>
   <HomeSearch></HomeSearch>
   <shopping-list></shopping-list>
+  <CountDown/>
   </div>
 </template>
 
 <script>
 import topHeader from './components/header.vue'
-import homeSearchVue from './components/homeSearch.vue';
+import countDown from './components/countDown.vue';
 import HomeSearch from './components/homeSearch.vue';
 import shoppingList from './components/shoppingList.vue';
+
 export default {
   name: 'App',
   components: {
     topHeader,
-    homeSearchVue,
-    HomeSearch,shoppingList
+    HomeSearch,
+    shoppingList,
+    countDown,
+
 }
 }
 </script>
