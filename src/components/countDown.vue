@@ -13,7 +13,7 @@
           <div>{{ countDown.S }}</div>
         </div>
       </div>
-      <div class="loop-img flex">
+      <!-- <div class="loop-img flex">
         <a href="" v-for="(i, index) in imgUrl" :key="index">
           <div class="flex" ref="img">
             <img :src="i" alt="" />
@@ -23,14 +23,17 @@
         </a>
         <button class="el-icon-arrow-left fl" @click="preImg"></button>
         <button class="el-icon-arrow-right fr" @click="nextImg"></button>
-      </div>
-
+      </div> -->
+      <swiperTest />
     </div>
   </div>
 </template>
 
 <script>
+import swiperTest from './swiperTest.vue';
+
 export default {
+  components: { swiperTest },
   data() {
     return {
       countDown: { H: "00", M: "00", S: "00" },

@@ -4,6 +4,7 @@
     <HomeSearch></HomeSearch>
     <shopping-list></shopping-list>
     <countDown />
+
   </div>
 </template>
 
@@ -20,10 +21,11 @@ export default {
     HomeSearch,
     shoppingList,
     countDown,
+
   },
-  mounted(){
-    console.log(this)
-  }
+  mounted() {
+    console.log(this);
+  },
 };
 </script>
 
