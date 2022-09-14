@@ -14,7 +14,7 @@
                 </a>
             </div>
         </swiper-slide>
-         <div class="swiper-button-prev " slot="button-prev"><div class=" el-icon-arrow-left fl"></div></div>
+        <div class="swiper-button-prev " slot="button-prev"><div class=" el-icon-arrow-left fl"></div></div>
         
         <div class="swiper-button-next" slot="button-next"><div class=" el-icon-arrow-right fl"></div></div>
     </swiper>
@@ -32,10 +32,14 @@ export default {
         return {
             swiperOption:{
                 autoplay:true,
-                speed:1000,
+                speed:500,
                 loop:true,
                 slidesPerView:4,
                 slidesPerGroup:4,
+                navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                        },
                 on:{
                     click(){
                         console.log(this)
@@ -94,16 +98,16 @@ export default {
 .aa {
     height:  260px;
     width:800px;
-   
+  
     
 }
 .aa .swiper-slide {
-     background-color: orange;
-     width: 205px;
-     height: 260px;
+
+    width: 205px;
+    height: 260px;
 }
 .swiper-slide span {
-      margin: 15px 0 0 0 ;
+  margin: 15px 0 0 0 ;
   font-size: 15px;
 }
 

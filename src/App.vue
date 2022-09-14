@@ -4,6 +4,7 @@
     <HomeSearch></HomeSearch>
     <shopping-list></shopping-list>
     <countDown />
+    <swiperDemo />
 
   </div>
 </template>
@@ -13,7 +14,7 @@ import topHeader from "./components/header.vue";
 import countDown from "./components/countDown.vue";
 import HomeSearch from "./components/homeSearch.vue";
 import shoppingList from "./components/shoppingList.vue";
-
+import swiperDemo from  "./components/swiperDemo.vue"
 export default {
   name: "App",
   components: {
@@ -21,6 +22,7 @@ export default {
     HomeSearch,
     shoppingList,
     countDown,
+    swiperDemo
 
   },
   mounted() {
@@ -45,7 +47,7 @@ body {
   float: right;
 }
 a:hover {
-  color: red;
+  color: red !important;
 }
 a {
   text-decoration: none;
