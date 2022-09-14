@@ -1,6 +1,6 @@
 <template>
   <div>
-    <swiper class="aa" :options="swiperOption" >
+    <swiper class="aa"  :options="swiperOption" >
         <a href=""></a>
         <swiper-slide  v-for="(i, index) in imgUrl" :key="index">
             <div>
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import Swiper from "swiper"
 import {swiper,swiperSlide} from 'vue-awesome-swiper'
 export default {
     components:{
@@ -36,15 +37,12 @@ export default {
                 loop:true,
                 slidesPerView:4,
                 slidesPerGroup:4,
+                loopSlide:8,
                 navigation: {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
                         },
-                on:{
-                    click(){
-                        console.log(this)
-                    }
-                }
+
 
             },
             imgUrl: [
@@ -59,7 +57,20 @@ export default {
         require("../assets/countDownImg/3.3.jpg"),
       ]
         }
-    },
+    },mounted(){
+    // var swiper1= new Swiper(".aa",{
+    //     autoplay:true,
+    //             speed:200,
+    //             loop:true,
+    //             slidesPerView:4,
+    //             slidesPerGroup:4,
+    //             loopSlide:8,
+    //             navigation: {
+    //                     nextEl: '.swiper-button-next',
+    //                     prevEl: '.swiper-button-prev',
+    //                     },
+    // })
+}
 
 }
 </script>

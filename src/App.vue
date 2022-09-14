@@ -1,11 +1,13 @@
 <template>
-  <div>
+  <div >
+    
     <topHeader></topHeader>
     <HomeSearch></HomeSearch>
+    <stickyHeader  />
     <shopping-list></shopping-list>
     <countDown />
     <swiperDemo />
-
+   
   </div>
 </template>
 
@@ -15,6 +17,7 @@ import countDown from "./components/countDown.vue";
 import HomeSearch from "./components/homeSearch.vue";
 import shoppingList from "./components/shoppingList.vue";
 import swiperDemo from  "./components/swiperDemo.vue"
+import stickyHeader  from "./components/stickyHeader.vue"
 export default {
   name: "App",
   components: {
@@ -22,16 +25,15 @@ export default {
     HomeSearch,
     shoppingList,
     countDown,
-    swiperDemo
+    swiperDemo,
+    stickyHeader 
 
-  },
-  mounted() {
-    console.log(this);
   },
 };
 </script>
 
 <style>
+
 * {
   margin: 0px;
   padding: 0px;

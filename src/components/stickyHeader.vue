@@ -1,11 +1,6 @@
 <template>
-  <div>
-    <div id="header">
-      <div class="m">
-        <a class="logo fl" href="">
-          <img src="../assets/home-logo.png" alt=""
-        /></a>
-        <div class="search" ref="stickyBox">
+  <div id="head  " ref="sh">
+    <div class="search" ref="stickyBox">
           <div class="search-m">
             <input class="search-box" type="text" placeholder="菠萝手机" />
             <el-button
@@ -22,56 +17,39 @@
             </div>
           </div>
         </div>
-        <div class="hot-words">
-          <div><a href="">卡地亚</a></div>
-          <div><a href="">手机</a></div>
-          <div><a href="">开学必备</a></div>
-          <div><a href="">淘宝</a></div>
-        </div>
-        <div class="nav-item">
-          <div><a href="">秒杀</a></div>
-          <div><a href="">优惠券</a></div>
-          <div><a href="">PLUS会员</a></div>
-          <div><a href="">品牌闪购</a></div>
-          <div><a href="">拍卖</a></div>
-          <div><a href="">京东家电</a></div>
-          <div><a href="">京东超市</a></div>
-          <div><a href="">京东生鲜</a></div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
 export default {
- 
-};
+//      methods: {
+//     scroll() {
+      
+      
+//       if (window.scrollY > 140) {
+        
+//         this.$refs.sh.style.cssText="display :block"
+        
+//       }else{
+//  this.$refs.sh.style.cssText="display :none"
+
+//       }
+//     },
+//   },
+//   mounted() {
+    
+//  window.addEventListener("scroll", this.scroll, true);
+    
+   
+  
+//   }
+
+}
 </script>
 
 <style scoped >
 
-.nav-item {
-  display: flex;
-  width: 750px;
-  height: 30px;
-  margin-left: 250px;
-  justify-content: space-between;
-  padding-top: 10px;
-}
-.nav-item a {
-  color: #000;
-  font-size: 15px;
-}
-.hot-words {
-  padding-top: 10px;
-  display: flex;
-  width: 250px;
-  height: 30px;
-  margin-left: 260px;
-  justify-content: space-between;
-  flex-basis: auto;
-}
+
 .shopping-car span {
   font-size: 15px;
   color: rgb(226, 35, 26);
@@ -105,17 +83,15 @@ export default {
 .camera-search:hover .el-icon-camera {
   color: rgb(226, 35, 26);
 }
-#header {
-  height: 140px;
-  background-color: rgb(255, 255, 255);
+#head {
+    position: fixed;
+    top: 100px;
+    
+    height: 140px;
+    background-color: red !important;;
   width: 100%;
 }
-.m {
-  position: relative;
-  margin: 0 auto;
-  height: 140px;
-  width: 1190px;
-}
+
 .logo {
   position: absolute;
   z-index: 1;
@@ -124,6 +100,8 @@ export default {
   height: 120px;
 }
 .search-m {
+    position: relative;
+    left: -100px;
   height: 60px;
   width: 960px;
   margin: auto;
@@ -164,4 +142,5 @@ export default {
 .search-box:focus::placeholder {
   color: rgb(164, 152, 152);
 }
+
 </style>
